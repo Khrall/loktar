@@ -1,16 +1,23 @@
 <?php
 /**
- * Deployment configuration
+ * Simple PHP Git deploy script
  *
- * It's preferable to configure the script using this file istead of directly.
- *
- * Rename this file to `deploy-config.php` and edit the
- * configuration options here instead of directly in `deploy.php`.
- * That way, you won't have to edit the configuration again if you download the
- * new version of `deploy.php`.
+ * Automatically deploy the code using PHP and Git.
  *
  * @version 1.2.2
+ * @link    https://github.com/markomarkovic/simple-php-git-deploy/
  */
+
+// =========================================[ Configuration start ]===
+
+/**
+ * It's preferable to configure the script using `deploy-config.php` file.
+ *
+ * Rename `deploy-config.example.php` to `deploy-config.php` and edit the
+ * configuration options there instead of here. That way, you won't have to edit
+ * the configuration again if you download the new version of `deploy.php`.
+ */
+if (file_exists(basename(__FILE__, '.php').'-config.php')) require_once basename(__FILE__, '.php').'-config.php';
 
 /**
  * Protect the script from unauthorized access by using a secret access token.
@@ -19,7 +26,7 @@
  *
  * @var string
  */
-define('SECRET_ACCESS_TOKEN', 'WeAreAllPartOfAGreaterPlanYouKnow');
+if (!defined('SECRET_ACCESS_TOKEN')) define('SECRET_ACCESS_TOKEN', 'BetterChangeMeNowOrSufferTheConsequences');
 
 /**
  * The address of the remote Git repository that contains the code that's being
@@ -28,7 +35,7 @@ define('SECRET_ACCESS_TOKEN', 'WeAreAllPartOfAGreaterPlanYouKnow');
  *
  * @var string
  */
-define('REMOTE_REPOSITORY', 'https://github.com/Khrall/loktar.git');
+if (!defined('REMOTE_REPOSITORY')) define('REMOTE_REPOSITORY', 'https://github.com/markomarkovic/simple-php-git-deploy.git');
 
 /**
  * The branch that's being deployed.
@@ -36,7 +43,7 @@ define('REMOTE_REPOSITORY', 'https://github.com/Khrall/loktar.git');
  *
  * @var string
  */
-define('BRANCH', 'master');
+if (!defined('BRANCH')) define('BRANCH', 'master');
 
 /**
  * The location that the code is going to be deployed to.
@@ -44,7 +51,7 @@ define('BRANCH', 'master');
  *
  * @var string Full path including the trailing slash
  */
-define('TARGET_DIR', '/wp-content/themes/loktar/');
+if (!defined('TARGET_DIR')) define('TARGET_DIR', '/tmp/simple-php-git-deploy/');
 
 /**
  * Whether to delete the files that are not in the repository but are on the
@@ -57,7 +64,7 @@ define('TARGET_DIR', '/wp-content/themes/loktar/');
  *
  * @var boolean
  */
-define('DELETE_FILES', true);
+if (!defined('DELETE_FILES')) define('DELETE_FILES', false);
 
 /**
  * The directories and files that are to be excluded when updating the code.
@@ -67,8 +74,10 @@ define('DELETE_FILES', true);
  *
  * @var serialized array of strings
  */
-define('EXCLUDE', serialize(array(
-	'.git'
+if (!defined('EXCLUDE')) define('EXCLUDE', serialize(array(
+	'.git',
+	'webroot/uploads',
+	'app/config/database.php',
 )));
 
 /**
@@ -79,28 +88,28 @@ define('EXCLUDE', serialize(array(
  *
  * @var string Full path including the trailing slash
  */
-define('TMP_DIR', '/tmp/');
+if (!defined('TMP_DIR')) define('TMP_DIR', '/tmp/spgd-'.md5(REMOTE_REPOSITORY).'/');
 
 /**
  * Whether to remove the TMP_DIR after the deployment.
  * It's useful NOT to clean up in order to only fetch changes on the next
  * deployment.
  */
-define('CLEAN_UP', true);
+if (!defined('CLEAN_UP')) define('CLEAN_UP', true);
 
 /**
  * Output the version of the deployed code.
  *
  * @var string Full path to the file name
  */
-define('VERSION_FILE', TMP_DIR.'VERSION.txt');
+if (!defined('VERSION_FILE')) define('VERSION_FILE', TMP_DIR.'VERSION.txt');
 
 /**
  * Time limit for each command.
  *
  * @var int Time in seconds
  */
-define('TIME_LIMIT', 30);
+if (!defined('TIME_LIMIT')) define('TIME_LIMIT', 30);
 
 /**
  * OPTIONAL
@@ -108,7 +117,7 @@ define('TIME_LIMIT', 30);
  *
  * @var string Full backup directory path e.g. '/tmp/'
  */
-define('BACKUP_DIR', false);
+if (!defined('BACKUP_DIR')) define('BACKUP_DIR', false);
 
 /**
  * OPTIONAL
@@ -119,7 +128,7 @@ define('BACKUP_DIR', false);
  * @var boolean Whether to use composer or not
  * @link http://getcomposer.org/
  */
-define('USE_COMPOSER', false);
+if (!defined('USE_COMPOSER')) define('USE_COMPOSER', false);
 
 /**
  * OPTIONAL
@@ -128,7 +137,7 @@ define('USE_COMPOSER', false);
  * @var string Composer options
  * @link http://getcomposer.org/doc/03-cli.md#install
  */
-define('COMPOSER_OPTIONS', '--no-dev');
+if (!defined('COMPOSER_OPTIONS')) define('COMPOSER_OPTIONS', '--no-dev');
 
 // ===========================================[ Configuration end ]===
 
