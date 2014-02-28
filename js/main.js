@@ -16,7 +16,7 @@ jQuery(document).ready(function($) {
 		}
 	}
 
-	//THIS IS A TEST
+	//THIS IS A TEST, COME ON
 
 	banner_toggler.bind('click', toggle_banner)
 
