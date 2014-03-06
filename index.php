@@ -8,6 +8,7 @@
         <meta charset="<?php bloginfo( 'charset' ); ?>">
         <title><?php bloginfo('name'); ?></title>
         <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
         <meta name="description" content="Khrall's awesome website!">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -20,8 +21,8 @@
         <![endif]-->
     
 
-    <div id="banner">
-
+    <div id="banner"><div class="wrapper">
+      
       <div id="banner-content">
         <img id="banner-logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="My logo!" />
         <h1>Doctor Khrall <span>+</span></h1>
@@ -30,7 +31,7 @@
         </ul>
       </div>
 
-    </div>
+    </div></div>
 
     <script>
         var _gaq=[['_setAccount','UA-43080362-2'],['_trackPageview']];
