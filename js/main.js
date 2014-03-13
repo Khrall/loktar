@@ -46,8 +46,7 @@ jQuery(document).ready(function($) {
 
     $("#slideshow").responsiveSlides();
 
-    $(window).resize(function() { 
-    	if(!Modernizr.cssvhunit) { $("#top-content").height(window.innerHeight); }
+    $(window).resize(function() {
     	$("#slideshow img").position({my: 'center center', at:'center center', of: '#banner-content'});
     })
 
