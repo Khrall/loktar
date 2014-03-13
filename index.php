@@ -21,17 +21,28 @@
         <![endif]-->
     
 
-    <div id="banner"><div class="wrapper">
-      
-      <div id="banner-content">
-        <img id="banner-logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="My logo!" />
-        <h1>Doctor Khrall <span>+</span></h1>
-        <ul>
-          <li>This site is under construction, come back soon!</li>
-        </ul>
-      </div>
+    <div id="top-content">
 
-    </div></div>
+        <ul id="slideshow">
+            <li><img src="<?php echo get_template_directory_uri(); ?>/img/tracks.png" /></li>
+            <li><img src="<?php echo get_template_directory_uri(); ?>/img/underground.png" /></li></li>
+        </ul>
+
+        <div id="banner"><div class="wrapper">
+          
+          <div id="banner-content">
+            <img id="banner-logo" src="<?php echo get_template_directory_uri(); ?>/img/logo_white.png" alt="My logo!" />
+            <div class="break-into-pieces">
+                <h1>Doctor Khrall <span>+</span></h1>
+                <ul>
+                    <li>This site is under construction, come back soon!</li>
+                </ul>
+            </div>
+          </div>
+
+        </div></div>
+
+    </div>
 
     <script>
         var _gaq=[['_setAccount','UA-43080362-2'],['_trackPageview']];

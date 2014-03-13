@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
 
-	var banner_toggler = $("#banner-content > h1 > span");
-	var banner_list = $("#banner-content > ul");
+	var banner_toggler = $("#banner-content h1 > span");
+	var banner_list = $("#banner-content ul");
 
 	var toggle_banner_on = function() {
 		banner_toggler.unbind();
@@ -43,5 +43,9 @@ jQuery(document).ready(function($) {
     banner_toggler.bind('click', toggle_banner_on);     
 
     if(!Modernizr.cssvhunit) { $("#banner").height($(window).height()); }
+
+    $("#slideshow").responsiveSlides();
+
+    $(window).resize(function() { $("#slideshow img").position({my: 'center center', at:'center center', of: '#banner-content'}); })
 
 });
