@@ -42,12 +42,12 @@ jQuery(document).ready(function($) {
 
     banner_toggler.bind('click', toggle_banner_on);     
 
-    if(!Modernizr.cssvhunit) { $("#banner").height($(window).height()); }
+    if(!Modernizr.cssvhunit) { $("#top-content").height($(window).height()); }
 
     $("#slideshow").responsiveSlides();
 
     $(window).resize(function() { 
-    	if(!Modernizr.cssvhunit) { $("#banner").height($(window).height()); }
+    	if(!Modernizr.cssvhunit) { $("#top-content").height($(window).height()); }
     	$("#slideshow img").position({my: 'center center', at:'center center', of: '#banner-content'});
     })
 
