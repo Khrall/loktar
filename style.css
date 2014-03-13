@@ -96,7 +96,7 @@ h1 {
 	#banner-content h1 { font-size: 18pt; }
 }
 
-@media only screen and (max-width : 568px) and (max-height : 320px), only screen and (max-device-width : 320px) and (max-device-height : 568px) and (orientation : portrait) { 
+@media only screen and (max-width : 568px) and (max-height : 320px), only screen and (max-device-width : 320px) and (max-device-height : 568px) and (orientation : landscape) { 
 	#banner-content { width: 460px; height: 200px; }
 	#banner-logo {
 		float: left;
