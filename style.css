@@ -87,7 +87,7 @@ h1 {
 	color: #D5D5D5;
 }
 
-@media only screen and (max-width : 340px) { 
+@media only screen and (max-device-width : 320px) { 
 	#banner-content { padding-top: 40px; width: 240px; height: 300px; }
 	#banner-logo {
 		width: 100px;
@@ -96,7 +96,7 @@ h1 {
 	#banner-content h1 { font-size: 18pt; }
 }
 
-@media only screen and (max-height : 320px) and (max-width : 568px) { 
+@media only screen and (max-device-height : 320px) and (max-device-width : 568px) { 
 	#banner-content { width: 460px; height: 200px; }
 	#banner-logo {
 		float: left;
