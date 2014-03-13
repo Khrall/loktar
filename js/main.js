@@ -48,6 +48,7 @@ jQuery(document).ready(function($) {
 
     $(window).bind('resize orientationchange', function() {
     	if(Math.abs(window.orientation) == 90) { $("#top-content").height('320px'); }
+    	else { $("#top-content").height(window.innerHeight); }
     	$("#slideshow img").position({my: 'center center', at:'center center', of: '#banner-content'});
     });
 
