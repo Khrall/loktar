@@ -46,8 +46,9 @@ jQuery(document).ready(function($) {
 
     $("#slideshow").responsiveSlides();
 
-    $(window).resize(function() {
+    $(window).bind('resize orientationchange', function() {
+    	if(Math.abs(window.orientation) == 90) { $("#top-content").height('320px'); }
     	$("#slideshow img").position({my: 'center center', at:'center center', of: '#banner-content'});
-    })
+    });
 
 });
