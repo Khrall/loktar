@@ -42,7 +42,6 @@ jQuery(document).ready(function($) {
 
     banner_toggler.bind('click', toggle_banner_on);     
 
-    if(!Modernizr.cssvhunit) { $("#banner").height($(window).height()); $("ul > li").html("Sorry, man..") }
-    else { $("ul > li").html("What, man..")  }
+    if(!Modernizr.cssvhunit) { $("#banner").height($(window).height()); }
 
 });
