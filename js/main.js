@@ -42,7 +42,10 @@ jQuery(document).ready(function($) {
 
     banner_toggler.bind('click', toggle_banner_on);     
 
-    if(!Modernizr.cssvhunit) { $("#top-content").height(window.innerHeight) + (Math.abs(window.orientation) == 90 ? 40 : 0); }
+    if(!Modernizr.cssvhunit) { 
+    	if(Math.abs(window.orientation) == 90) { $("h1").text('yes'); }
+    	$("#top-content").height(window.innerHeight); 
+    }
 
     var onOrientationChange = function() {
     	$("#top-content").height(window.innerHeight);
