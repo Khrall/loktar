@@ -47,13 +47,10 @@ jQuery(document).ready(function($) {
 
     var onOrientationChange = function() {
     	$("#top-content").height(window.innerHeight);
-    }
-
-    var onResize = function() {
     	$("#slideshow img").position({my: 'center center', at:'center center', of: '#banner-content'});
     }
 
-    $(window).bind('orientationchange', onOrientationChange);
-    $(window).bind('resize', onResize);
+    $(window).bind('resize orientationchange', onOrientationChange);
+  
 
 });
