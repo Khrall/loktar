@@ -46,8 +46,7 @@ jQuery(document).ready(function($) {
     $("#slideshow").responsiveSlides();
 
     var onOrientationChange = function() {
-    	if(window.innerHeight > 320) { $("#top-content").height('320px'); }
-    	else { $("#top-content").height('100vh'); }
+    	$("#top-content").height(window.innerHeight);
     }
 
     var onResize = function() {
