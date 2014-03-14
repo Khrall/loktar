@@ -42,17 +42,18 @@ jQuery(document).ready(function($) {
 
     banner_toggler.bind('click', toggle_banner_on);     
 
-    if(!Modernizr.cssvhunit) { $("#top-content").height(window.innerHeight); }
+    if(!Modernizr.cssvhunit) { $("#top-content").height(window.innerHeight) + Math.abs(window.orientation) == 90 ? 178 : 0; }
 
     var onOrientationChange = function() {
     	$("#top-content").height(window.innerHeight);
     	$("#slideshow img").position({my: 'center center', at:'center center', of: '#banner-content'});
+    	$("h1").text(window.innerHeight);
     }
 
     $(window).bind('resize orientationchange', onOrientationChange);
 
   	$("#slideshow").responsiveSlides();
 	
-	$("h1").text(window.innerHeight);
+
 
 });
