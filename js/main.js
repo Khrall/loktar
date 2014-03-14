@@ -43,7 +43,6 @@ jQuery(document).ready(function($) {
     banner_toggler.bind('click', toggle_banner_on);     
 
     if(!Modernizr.cssvhunit) { $("#top-content").height(window.innerHeight); }
-    $("#slideshow").responsiveSlides();
 
     var onOrientationChange = function() {
     	$("#top-content").height(window.innerHeight);
@@ -51,6 +50,8 @@ jQuery(document).ready(function($) {
     }
 
     $(window).bind('resize orientationchange', onOrientationChange);
-  
+  	
+  	$("#slideshow").responsiveSlides();
+    
 
 });
