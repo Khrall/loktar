@@ -42,7 +42,7 @@ jQuery(document).ready(function($) {
 
     banner_toggler.bind('click', toggle_banner_on);     
 
-    if(!Modernizr.cssvhunit || Math.abs(window.orientation) == 90) { $("#top-content").height(window.innerHeight); }
+    if(!Modernizr.cssvhunit) { $("#top-content").height(window.innerHeight); }
 
     var onOrientationChange = function() {
     	$("#top-content").height(window.innerHeight);
@@ -52,6 +52,6 @@ jQuery(document).ready(function($) {
     $(window).bind('resize orientationchange', onOrientationChange);
 
   	$("#slideshow").responsiveSlides();
-	$("#slideshow img").position({my: 'center center', at:'center center', of: '#banner-content'});
+	onOrientationChange();
 
 });
