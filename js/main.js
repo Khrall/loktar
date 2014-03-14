@@ -50,7 +50,8 @@ jQuery(document).ready(function($) {
     }
 
     $(window).bind('resize orientationchange', onOrientationChange);
-  	
+
   	$("#slideshow").responsiveSlides();
+	$("#slideshow img").position({my: 'center center', at:'center center', of: '#banner-content'});
 
 });
