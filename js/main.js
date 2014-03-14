@@ -43,8 +43,8 @@ jQuery(document).ready(function($) {
     banner_toggler.bind('click', toggle_banner_on);     
 
     if(!Modernizr.cssvhunit) { 
-    	if(Math.abs(window.orientation) == 90) { $("h1").text('yes'); }
-    	$("#top-content").height(window.innerHeight); 
+    	if(Math.abs(window.orientation) == 90) { $("#top-content").height('214px'); } // IS LANDSCAPE
+    	else { $("#top-content").height(window.innerHeight); }
     }
 
     var onOrientationChange = function() {
