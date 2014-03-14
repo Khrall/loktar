@@ -52,6 +52,7 @@ jQuery(document).ready(function($) {
     $(window).bind('resize orientationchange', onOrientationChange);
 
   	$("#slideshow").responsiveSlides();
-	onOrientationChange();
+	
+	$("h1").text(window.innerHeight);
 
 });
