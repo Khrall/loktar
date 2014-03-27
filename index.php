@@ -22,19 +22,13 @@
     
 
     <div id="top-content">
-
-        <ul id="slideshow">
-            <li><img src="<?php echo get_template_directory_uri(); ?>/img/tracks.png" /></li>
-            <li><img src="<?php echo get_template_directory_uri(); ?>/img/underground.png" /></li></li>
-        </ul>
-
         <div id="banner"><div class="wrapper">
           
           <div id="banner-content">
-            <img id="banner-logo" src="<?php echo get_template_directory_uri(); ?>/img/logo_white.png" alt="My logo!" />
+            <img id="banner-logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="My logo!" />
             <div class="break-into-pieces">
                 <h1>Doctor Khrall <span>+</span></h1>
-                <ul>
+                <ul class="light">
                     <li>This site is under construction, come back soon!</li>
                 </ul>
             </div>
@@ -44,11 +38,27 @@
 
     </div>
 
+    <div class="content-breaker"></div>
+
+    <div id="about" class="page-content">
+        <div class="wrapper">
+            <img class="avatar" src="<?php echo get_template_directory_uri(); ?>/img/self.png" />
+            <h1 class="name">Raymi T. Eldby</h1>
+            <p class="description light">Hi, I’m a program and web developer!<br/>I turn great ideas into solid products<br/>ready for deployment.</p>
+            <ul class="social">
+                <li class="social-icon github"></li>
+                <li class="social-icon linkedin"></li>
+            </ul>
+        </div>
+    </div>
+
     <script>
         var _gaq=[['_setAccount','UA-43080362-2'],['_trackPageview']];
         (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
         g.src='//www.google-analytics.com/ga.js';
         s.parentNode.insertBefore(g,s)}(document,'script'));
+
+        var themeURL = "<?php echo get_template_directory_uri(); ?>";
     </script>
     <?php wp_footer(); ?>
     </body>

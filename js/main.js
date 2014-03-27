@@ -50,13 +50,41 @@ jQuery(document).ready(function($) {
     var onOrientationChange = function() {
     	$("#top-content").height(window.innerHeight);
     	$("#slideshow img").position({my: 'center center', at:'center center', of: '#banner-content'});
-    	$("h1").text(window.innerHeight);
     }
 
     $(window).bind('resize orientationchange', onOrientationChange);
 
-  	$("#slideshow").responsiveSlides();
-	
+    var names = ['tracks']
+    var offsets = [0]
+    var imageElements = {};
+    var loadParallax = function(callback) {
+    	var loaded = 0;
+    	var width = window.innerWidth;
+    	var height = width * 1080 / 1920;
+    	
+    	for(var i = 0; i < names.length; i++) {
+    		var url = themeURL + '/img/' + names[i] + '.png';
+    		var element = $('<img src="'+ url + '">')
+    		var offset = 340 + offsets[i] - height;
+    		imageElements[names[i]] = element;
+			element.load( function() {
+    			$(this).width(width)
+    				   .height(height)
+    				   .attr('data-stellar-vertical-offset', offset)
+    				   .attr('data-stellar-ratio', 0.5)
+    				   .addClass('parallax')
+    				   .css('z-index', i+1);
+    			loaded++;
+    			if(loaded == names.length) callback();
+    		});
+    	}
+    }
 
+    loadParallax(function() {
+    	for(var i = 0; i < names.length; i++) {
+			imageElements[names[i]].appendTo('body');
+    	}
+    	$.stellar();
+    })
 
 });
