@@ -38,6 +38,12 @@ h1 {
 	font-size: 24pt;
 }
 
+h2 {
+	color: #646464;
+	font-weight: bold;
+	font-size: 17pt;
+}
+
 /*
  *	BANNER AREA
  */
@@ -164,10 +170,9 @@ h1 {
 }
 
 img.parallax {
-	top: 0;
-	left: 0;
 	position: fixed;
 	z-index: 1;
+	top: 0;
 }
 
 .page-content {
@@ -219,3 +224,27 @@ img.parallax {
 .social-icon.github:hover { background: transparent url('img/github-hover.png'); background-size: contain; }
 .social-icon.linkedin { background: transparent url('img/linkedin.png'); background-size: contain; }
 .social-icon.linkedin:hover { background: transparent url('img/linkedin-hover.png'); background-size: contain; }
+
+#portfolio .wrapper {
+	text-align: center;
+}
+
+#portfolio h1.intro-header {
+	margin-top: 10px;
+}
+
+#portfolio p.intro-description {
+	margin: 10px 0 30px;
+}
+
+#showcase {
+	text-align: left;
+}
+
+#showcase .bx-pager {
+	margin-bottom: -20px;
+}
+
+#showcase .profiles img {
+	width: 100%;
+}

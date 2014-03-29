@@ -25,21 +25,6 @@ jQuery(document).ready(function($) {
 		);
 	}
 
-	/*
-	var toggle_banner = function() {
-		if(banner_toggler.isToggled) {
-			banner_toggler.html('+');
-			banner_list.hide('slide', {direction: 'up'});
-			banner_toggler.isToggled = false;
-		} else {
-			banner_toggler.html('-');
-			banner_list.show('slide', {direction: 'up', easing: 'easeOutBounce'}, 1000);
-			banner_toggler.isToggled = true;
-		}
-	}*/
-
-	//THIS IS A TEST, COME ON
-
     banner_toggler.bind('click', toggle_banner_on);     
 
     if(!Modernizr.cssvhunit) { 
@@ -54,37 +39,45 @@ jQuery(document).ready(function($) {
 
     $(window).bind('resize orientationchange', onOrientationChange);
 
-    var names = ['tracks']
-    var offsets = [0]
+    var names = ['tracks', 'underground']
     var imageElements = {};
     var loadParallax = function(callback) {
     	var loaded = 0;
     	var width = window.innerWidth;
     	var height = width * 1080 / 1920;
-    	
+
     	for(var i = 0; i < names.length; i++) {
     		var url = themeURL + '/img/' + names[i] + '.png';
+    		var offset = - (height + window.innerHeight) * i - 250;
+    		
     		var element = $('<img src="'+ url + '">')
-    		var offset = 340 + offsets[i] - height;
+    		.addClass('parallax')
+    		.attr('data-stellar-vertical-offset', offset)
+    		.attr('data-stellar-ratio', 0.5);
+
     		imageElements[names[i]] = element;
 			element.load( function() {
-    			$(this).width(width)
-    				   .height(height)
-    				   .attr('data-stellar-vertical-offset', offset)
-    				   .attr('data-stellar-ratio', 0.5)
-    				   .addClass('parallax')
-    				   .css('z-index', i+1);
+    			$(this).width(width).height(height);
     			loaded++;
-    			if(loaded == names.length) callback();
+    			if(loaded == names.length) callback(height);
     		});
     	}
     }
 
-    loadParallax(function() {
+    loadParallax(function(height) {
     	for(var i = 0; i < names.length; i++) {
 			imageElements[names[i]].appendTo('body');
     	}
     	$.stellar();
+
+    	$("#showcase ul.descriptions li[project-id!='0']").hide();
+    	$("#showcase .profiles").bxSlider({
+    		onSlideBefore: function($slideElement, oldIndex, newIndex) {
+    			$("#showcase ul.descriptions li[project-id='"+oldIndex+"']").fadeOut(250, function() {
+    				$("#showcase ul.descriptions li[project-id='"+newIndex+"']").fadeIn(250);
+    			});
+    		}
+    	})
     })
 
 });
