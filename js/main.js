@@ -34,7 +34,6 @@ jQuery(document).ready(function($) {
 
     var onOrientationChange = function() {
     	$("#top-content").height(window.innerHeight);
-    	$("#slideshow img").position({my: 'center center', at:'center center', of: '#banner-content'});
     }
 
     $(window).bind('resize orientationchange', onOrientationChange);
