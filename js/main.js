@@ -69,7 +69,6 @@ jQuery(document).ready(function($) {
     	}
     }
 
-    if(!window.mobilecheck()) {
     loadParallax(function(height) {
     	for(var i = 0; i < names.length; i++) {
 			imageElements[names[i]].appendTo('body');
@@ -84,6 +83,6 @@ jQuery(document).ready(function($) {
     			});
     		}
     	})
-    })}
+    }
 
 });
