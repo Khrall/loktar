@@ -170,6 +170,10 @@ img#banner-logo {
 	.page-content {
 		height: 480px;
 	}
+
+	.page-content > .wrapper {
+		width: 320px;
+	}
 }
 
 /* Smartphones (portrait) ----------- */
