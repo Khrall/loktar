@@ -164,3 +164,17 @@ img#banner-logo {
 #showcase .profiles img {
 	width: 100%;
 }
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+	.page-content {
+		height: 480px;
+	}
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (device-aspect-ratio: 40/71) {
+	.page-content {
+		height: 560px;
+	}
+}
