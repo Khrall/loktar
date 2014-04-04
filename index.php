@@ -21,20 +21,14 @@
         <![endif]-->
     
 
-    <div id="top-content">
-        <div id="banner"><div class="wrapper">
-          
-          <div id="banner-content">
+    <div id="banner" class="page-content">
+        <div class="wrapper">
             <img id="banner-logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="My logo!" />
-            <div class="break-into-pieces">
-                <h1>Doctor Khrall <span>+</span></h1>
-                <ul class="light">
-                    <li>This site is under construction, come back soon!</li>
-                </ul>
-            </div>
-          </div>
-
-        </div></div>
+            <h1>Doctor Khrall <span>+</span></h1>
+            <ul class="light">
+                <li>This site is under construction, come back soon!</li>
+            </ul>
+        </div>
 
     </div>
 

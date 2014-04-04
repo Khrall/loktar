@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
 
-	var banner_toggler = $("#banner-content h1 > span");
-	var banner_list = $("#banner-content ul");
+	var banner_toggler = $("#banner h1 > span");
+	var banner_list = $("#banner ul");
 
 	var toggle_banner_on = function() {
 		banner_toggler.unbind();
@@ -27,17 +27,17 @@ jQuery(document).ready(function($) {
 
     banner_toggler.bind('click', toggle_banner_on);     
 
-    if(!Modernizr.cssvhunit) { 
-    	if(Math.abs(window.orientation) == 90) { $("#top-content").height('214px'); } // IS LANDSCAPE
-    	else { $("#top-content").height(window.innerHeight); }
+    var resizePage = function() {
+    	$(".page-content").each(function() {
+    		var parentHeight = $(this).height();
+    		var childHeight = $(this).find('.wrapper').height();
+    		console.log('parent: '+parentHeight+', child: '+childHeight)
+    		if(parentHeight < childHeight) $(this).height(childHeight) + 100;
+    	});
     }
 
-    var onOrientationChange = function() {
-    	$("#top-content").height(window.innerHeight);
-    	$("#slideshow img").position({my: 'center center', at:'center center', of: '#banner-content'});
-    }
-
-    $(window).bind('resize orientationchange', onOrientationChange);
+    $(window).bind('resize', resizePage);
+    resizePage();
 
     var names = ['tracks', 'underground']
     var imageElements = {};
