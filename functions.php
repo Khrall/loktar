@@ -2,7 +2,7 @@
 /**
  * Proper way to enqueue scripts and styles
  */
-function theme_name_scripts() {
+function front_page_scripts() {
 
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );
 	wp_enqueue_style( 'bxSlider-css', get_template_directory_uri() . '/css/jquery.bxslider.css' );
@@ -17,6 +17,15 @@ function theme_name_scripts() {
 
 }
 
-add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
+function ktn_elm_chat_scripts() {
+
+	wp_enqueue_style( 'reset-css', get_template_directory_uri() . '/css/reset.css' );
+	wp_enqueue_style( 'nanoscroller', get_template_directory_uri() .'/css/nanoscroller.css');
+	wp_enqueue_style( 'ktn-css', get_template_directory_uri() .'/css/ktn-elm-chat.css');
+	wp_enqueue_script( 'socketIO', get_template_directory_uri() . '/js/vendor/socket.io.js', array(), '0.9.11', true );
+	wp_enqueue_script( 'nanoscroller', get_template_directory_uri() . '/js/vendor/jquery.nanoscroller.min.js', array('jquery'), '0.8.0', true );
+	wp_enqueue_script( 'ktn-js', get_template_directory_uri() . '/js/ktn-elm-chat.js', array('jquery', 'socketIO', 'nanoscroller'), '1.0.0', true );
+
+}
 
 ?>
