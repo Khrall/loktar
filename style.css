@@ -167,18 +167,31 @@ img#banner-logo {
 
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 320px) {
+	#banner {
+		height: 460px;
+	}
+
+	#about img.avatar {
+		width: 180px;
+	}
+
 	.page-content {
-		height: 480px;
+		padding: 80px 0;
+		height: auto;
 	}
 
 	.page-content > .wrapper {
-		width: 320px;
+		width: 300px;
+	}
+
+	.content-breaker {
+		height: 200px;
 	}
 }
 
 /* Smartphones (portrait) ----------- */
 @media only screen and (device-aspect-ratio: 40/71) {
 	.page-content {
-		height: 560px;
+		height: 568px;
 	}
 }
