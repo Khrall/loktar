@@ -1,5 +1,9 @@
 var ua = navigator.userAgent, isMobileWebkit = /WebKit/.test(ua) && /Mobile/.test(ua);
 
+Modernizr.addTest('ipad', function () {
+  return !!navigator.userAgent.match(/iPad/i);
+});
+
 jQuery(document).ready(function($) {
 
 	var banner_toggler = $("#banner h1 > span");
@@ -83,6 +87,11 @@ jQuery(document).ready(function($) {
     	}
     }
 
+    if(Modernizr.ipad) {
+        var height = window.height;
+        $(".page-content").height(height);
+    }
+
     if (!isMobileWebkit) {
 	    loadParallax(function(height) {
 	    	for(var i = 0; i < names.length; i++) {
@@ -108,5 +117,7 @@ jQuery(document).ready(function($) {
 			});
 		}
 	})
+
+
 
 });

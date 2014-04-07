@@ -201,4 +201,20 @@ h1#title {
 	#wrapper {
 		width: 320px;
 	}
+
+	#chat {
+		width: 320px;
+	}
+
+	#chat input {
+		width: 220px;
+	}
+
+	h1, p {
+		padding: 0 30px;
+	}
+
+	.horizontal-line {
+		margin: 10px 30px;
+	}
 }
