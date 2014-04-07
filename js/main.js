@@ -88,8 +88,9 @@ jQuery(document).ready(function($) {
     }
 
     if(Modernizr.ipad) {
-        var height = window.height;
-        $(".page-content").height(height);
+        var height = window.innerHeight;
+        var width = window.innerWidth;
+        $(".page-content").height(height > width ? height : width);
     }
 
     if (!isMobileWebkit) {
