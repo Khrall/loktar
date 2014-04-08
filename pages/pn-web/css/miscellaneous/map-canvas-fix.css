@@ -1,0 +1,17 @@
+@media (max-height: 600px) and (max-width: 350px) {
+	#map_canvas {
+		height: 488px;
+	}
+}
+
+@media (max-height: 500px) and (max-width: 350px) {
+	#map_canvas {
+		height: 400px;
+	}
+}
+
+@media (max-height: 400px) {
+	#map_canvas {
+		height: 240px;
+	}
+}

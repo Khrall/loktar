@@ -1,0 +1,102 @@
+@media (max-width: 767px) {
+	body {
+		font-size: 70%;
+	}
+	
+	#featured-house {
+		width: 100%;
+	}
+	
+	#slogan_mobile h1 {
+		font-size: 5em;
+		line-height: 1em;
+	}
+	
+	#slogan_mobile p {
+		width: 80%;
+	}
+	
+	#close-content {
+		margin-top: 2.5em;
+		width: 100%;
+		margin-left: 0;
+	}
+
+	#profile {
+		width: 100%;
+		margin-left: 0;
+	}
+	
+	#profile-content .span5 {
+		width: 100%;
+		margin-left: 0;
+	}
+	
+	#profile-content .span3 {
+		width: 100%;
+		margin-top: 1.5em;
+	}
+	
+	#projects {
+		margin-top: 2em;
+	}
+	
+	.row-fluid > .project, .row-fluid > .project.offset2.span4 {
+		width: 100%;
+		margin-left: 0;
+		margin-bottom: 3em;
+	}
+
+	.row-fluid p, .row-fluid h2, .row-fluid h1 {
+		padding: 0 20px;
+	}
+
+	#contact {
+		width: 100%;
+		margin-left: 0;
+	}
+	
+	.row-fluid > .contact-card {
+		width: 100%;
+		margin-left: 0;
+		padding-top: 20px;
+		margin-bottom: 2em;
+	}
+	
+	#office {
+		width: 100%;
+		margin-left: 0;
+	}
+	
+	#map_canvas {
+		width: 100%;
+		margin-left: 0;
+		height: 400px;
+		margin-top: 2em;
+	}
+	
+	.row-fluid.mobile_bottom {
+		margin-bottom: 0;
+	}
+
+
+	#project-content .nav_holder { 
+		width: 0;
+		display: none;
+	}
+
+	#project-content .span8 {
+		width: 100%;
+		margin-left: 0;
+		margin-bottom: 20px;
+	}
+
+	#project-content .offset3.span6 {
+		width: 80%;
+		margin-left: 10%;
+	}
+
+	#project-content .offset3.span6 h1 {
+		font-size: 2em;
+	}
+}

@@ -1,0 +1,22 @@
+@media (min-width: 1200px) and (max-width: 1599px) {
+	body {
+		font-size: 70%;
+	}
+
+	header > .wrapper {
+		width: 75%;
+	}
+
+	header #social {
+		top: 29px;
+		right: 1.5%;
+	}
+
+	#social .facebook a { background: url('../../img/face-28.png') no-repeat; }
+	#social .instagram a { background: url('../../img/insta-28.png') no-repeat; }
+
+	header #social > li {
+		width: 28px;
+		height: 28px;
+	}
+}

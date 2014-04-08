@@ -1,0 +1,56 @@
+@media (max-width: 399px) {
+
+	body {
+		padding-top: 70px;
+	}
+
+	header {
+		height: 70px;
+	}
+
+	header .wrapper {
+		width: 90%;
+		margin: 10px auto 0;
+	}
+
+	header .wrapper > a {
+		width: 60%;
+		margin-left: 0;
+		float: none;
+	}
+	
+	header .wrapper > nav {
+		width: 100%;
+		font-size: 0.8em;
+		float: none;
+		margin-top: 7px;
+		position: relative;
+		left: -132px;
+	}
+
+	header .wrapper > nav ul {
+		margin-left: 0;
+		width: 120%;
+	}
+
+	header .wrapper > nav li {
+		margin-left: 30px;
+	}
+
+	header #social {
+		top: 11px;
+	}
+
+	header #social > li {
+		width: 20px;
+		height: 20px;
+	}
+
+	#social .facebook a { background: url('../../img/face-20.png') no-repeat; }
+	#social .instagram a { background: url('../../img/insta-20.png') no-repeat; }
+	
+	#slogan_mobile p {
+		font-size: 1.1em;
+	}
+
+}

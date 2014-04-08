@@ -1,0 +1,37 @@
+@media (min-width: 600px) and (max-width: 1199px) { 
+	body {
+		font-size: 60%;
+	}
+
+	header .wrapper > a {
+		width: 25%;
+	}
+	
+	header .wrapper > nav {
+		width: 55%;
+		margin-right: 5%;
+	}
+
+	header #social {
+		right: 2%;
+		top: 28px;
+	}
+
+	header #social > li {
+		width: 26px;
+		height: 26px;
+	}
+
+	#project-content .offset2.span8 {
+		width: 80%;
+		margin-left: 10%;
+	}
+
+	#project-content .offset3.span6 {
+		width: 66.7%;
+		margin-left: 16.7%;
+	}
+
+	#social .facebook a { background: url('../../img/face-26.png') no-repeat; }
+	#social .instagram a { background: url('../../img/insta-26.png') no-repeat; }
+}

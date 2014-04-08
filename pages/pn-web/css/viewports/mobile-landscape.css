@@ -1,0 +1,59 @@
+@media (min-width: 400px) and (max-width: 599px) {
+	body {
+		padding-top: 75px;
+	}
+
+	header {
+		height: 75px;
+	}
+
+	header .wrapper {
+		width: 90%;
+		margin: 15px auto 0;
+	}
+
+	header .wrapper > a {
+		float: none;
+		width: 50%;
+		margin-left: 0;
+	}
+
+	header .wrapper > nav {
+		float: none;
+		margin-top: 10px;
+		font-size: 0.8em;
+		position: relative;
+		left: -155px;
+	}
+
+	header .wrapper > nav ul {
+		margin-left: 0;
+	}
+
+	header .wrapper > nav ul > li {
+		margin-left: 50px;
+	}
+	
+	header #social {
+		top: 16px;
+	}
+
+	header #social > li {
+		width: 24px;
+		height: 24px;
+	}
+
+	#social .facebook a { background: url('../../img/face-24.png') no-repeat; }
+	#social .instagram a { background: url('../../img/insta-24.png') no-repeat; }
+
+	#slogan_mobile p {
+		font-size: 1.5em;
+	}
+}
+
+
+@media (min-width: 400px) and (max-width: 480px) {
+	header .wrapper > nav {
+		left: -90px;
+	}
+}

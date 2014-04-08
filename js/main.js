@@ -5,7 +5,7 @@ Modernizr.addTest('ipad', function () {
 });
 
 jQuery(document).ready(function($) {
-
+    
 	var banner_toggler = $("#banner h1 > span");
 	var banner_list = $("#banner ul");
 
@@ -37,7 +37,6 @@ jQuery(document).ready(function($) {
     	$(".page-content").each(function() {
     		var parentHeight = $(this).height();
     		var childHeight = $(this).find('.wrapper').height();
-    		console.log('parent: '+parentHeight+', child: '+childHeight)
     		if(parentHeight < childHeight) $(this).height(childHeight) + 100;
     	});
     }
@@ -54,12 +53,14 @@ jQuery(document).ready(function($) {
 
     	for(var i = 0; i < names.length; i++) {
     		var url = themeURL + '/img/' + names[i] + '.png';
-    		var offset = - (height + window.innerHeight) * i - 250;
-    		
+    		var ratio = 300/height;
+            var offset = - (height * ratio) * i - (i+1) * window.innerHeight;
+
     		var element = $('<img src="'+ url + '">')
     		.addClass('parallax')
+            .css('z-index', 4-i)
     		.attr('data-stellar-vertical-offset', offset)
-    		.attr('data-stellar-ratio', 0.5);
+    		.attr('data-stellar-ratio', ratio);
 
     		imageElements[names[i]] = element;
 			element.load( function() {
@@ -93,12 +94,24 @@ jQuery(document).ready(function($) {
         $(".page-content").height(height > width ? height : width);
     }
 
+    var section = 0;
     if (!isMobileWebkit) {
 	    loadParallax(function(height) {
 	    	for(var i = 0; i < names.length; i++) {
 				imageElements[names[i]].appendTo('body');
 	    	}
 	    	$.stellar();
+            $(document).bind('scroll', function() {
+                if(section == 0 && $(document).scrollTop() - $('#about').offset().top > 0) {
+                    section = 1;
+                    imageElements[names[0]].css('z-index', 1);
+                    imageElements[names[1]].css('z-index', 2);
+                } else if(section == 1 && $(document).scrollTop() - $('#about').offset().top <= 0) {
+                    section = 0;
+                    imageElements[names[0]].css('z-index', 2);
+                    imageElements[names[1]].css('z-index', 1);
+                }
+            })
 	    });
 	} else {
 		loadImages(function(height) {

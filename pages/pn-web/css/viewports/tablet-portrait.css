@@ -1,0 +1,16 @@
+@media (min-width: 600px) and (max-width: 999px) { 
+	header .wrapper > a {
+		width: 40%;
+	}
+	
+	header .wrapper > nav {
+		width: 52%;
+		margin-right: 8%;
+	}
+	
+	.row-fluid > .project, .row-fluid > .project.offset2.span4 {
+		width: 66.7%;
+		margin-left: 16.7%;
+		margin-bottom: 5em;
+	}
+}

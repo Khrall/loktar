@@ -1,0 +1,50 @@
+@media (min-width: 768px) and (max-width: 1199px) {
+	#featured-house {
+		width: 100%;
+	}
+	
+	#close-content {
+		margin-top: 2.5em;
+		width: 66.7%;
+		margin-left: 16.7%;
+	}
+	
+	#profile {
+		width: 66.7%;
+		margin-left: 16.7%;
+	}
+	
+	#profile-content .span5 {
+		width: 66.7%;
+		margin-left: 16.7%;
+	}
+	
+	#profile-content .span3 {
+		width: 66.7%;
+		margin-left: 16.7%;
+		margin-top: 1.5em;
+	}
+	
+	.row-fluid > .project {
+		width: 30%;
+	}
+	
+	#contact {
+		width: 18%;
+	}
+	
+	.row-fluid > .contact-card {
+		padding-top: 3%;
+		margin-bottom: 5em;
+		width: 20%;
+	}
+	
+	#office {
+		margin-right: 5%;
+	}
+	
+	#map_canvas {
+		height: 250px;
+	}
+	
+}

@@ -21,11 +21,32 @@ function ktn_elm_chat_scripts() {
 
 	wp_enqueue_style( 'reset-css', get_template_directory_uri() . '/css/reset.css' );
 	wp_enqueue_style( 'nanoscroller', get_template_directory_uri() .'/css/nanoscroller.css');
-	wp_enqueue_style( 'ktn-css', get_template_directory_uri() .'/css/ktn-elm-chat.css');
+	wp_enqueue_style( 'ktn-css', get_template_directory_uri() .'/pages/ktn-elm-chat/style.css');
 	wp_enqueue_script( 'socketIO', get_template_directory_uri() . '/js/vendor/socket.io.js', array(), '0.9.11', true );
 	wp_enqueue_script( 'nanoscroller', get_template_directory_uri() . '/js/vendor/jquery.nanoscroller.min.js', array('jquery'), '0.8.0', true );
-	wp_enqueue_script( 'ktn-js', get_template_directory_uri() . '/js/ktn-elm-chat.js', array('jquery', 'socketIO', 'nanoscroller'), '1.0.0', true );
+	wp_enqueue_script( 'ktn-js', get_template_directory_uri() . '/pages/ktn-elm-chat/script.js', array('jquery', 'socketIO', 'nanoscroller'), '1.0.0', true );
 
+}
+
+function pn_web_home_scripts() {
+	wp_enqueue_style( 'bootstrap-old-css', get_template_directory_uri() . '/pages/pn-web/libs/bootstrap/bootstrap.min.css' );
+	wp_enqueue_style( 'responsiveslides-css', get_template_directory_uri() . '/css/responsiveslides.css' );
+	wp_enqueue_style( 'pn-web-home-css', get_template_directory_uri() .'/pages/pn-web/style.css');
+	
+	wp_enqueue_script( 'pn-web-general-js', get_template_directory_uri() . '/pages/pn-web/js/general.js', array('jquery'), '1.0.0', true );
+	wp_enqueue_script( 'pn-web-home-js', get_template_directory_uri() . '/pages/pn-web/js/home.js', array('jquery', 'jquery-ui-position', 'jquery-effects-core'), '1.0.0', true );
+	
+}
+
+function pn_web_project_scripts() {
+	wp_enqueue_style( 'bootstrap-old-css', get_template_directory_uri() . '/pages/pn-web/libs/bootstrap/bootstrap.min.css' );
+	wp_enqueue_style( 'responsiveslides-css', get_template_directory_uri() . '/css/responsiveslides.css' );
+	wp_enqueue_style( 'pn-web-project-css', get_template_directory_uri() .'/pages/pn-web/projects/style.css');
+
+	wp_enqueue_script( 'responsiveslides-js', get_template_directory_uri() . '/js/vendor/responsiveslides.min.js', array('jquery'), '1.5.4', true );
+	wp_enqueue_script( 'pn-web-general-js', get_template_directory_uri() . '/pages/pn-web/js/general.js', array('jquery'), '1.0.0', true );
+	wp_enqueue_script( 'pn-web-project-js', get_template_directory_uri() . '/pages/pn-web/js/projects.js', array('jquery', 'jquery-ui-position', 'jquery-effects-core','responsiveslides-js'), '1.0.0', true );
+	
 }
 
 ?>

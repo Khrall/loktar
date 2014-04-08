@@ -1,0 +1,73 @@
+header {
+	width: 100%;
+	height: 80px;
+	background: #fff;
+	font-size: 12px;
+	position: fixed;
+	top: 0;
+	z-index: 3;
+}
+
+header .wrapper {
+	width: 80%;
+	max-width: 1200px;
+	margin: 30px auto;
+}
+
+header .wrapper > a {
+	width: 20%;
+	float: left;
+	display: inline-block;
+}
+
+header .wrapper > nav {
+	margin-top: 0.2%;
+	float: right;
+	display: inline-block;
+	width: 80%;
+}
+
+header nav ul {
+	width: 100%;
+	list-style-type: none;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+header nav ul > li {
+	display: inline-block;
+	float: right;
+	margin-left: 5%;
+}
+
+header #social {
+	list-style-type: none;
+	position: absolute;
+	right: 3%;
+	top: 26px;
+}
+
+header #social > li {
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+	background: #616161;
+}
+
+header #social a {
+	width: 100%;
+	height: 100%;
+	display: block;
+	
+}
+
+#social .facebook a { background: url('../img/face.png') no-repeat; }
+#social .instagram a { background: url('../img/insta.png') no-repeat; }
+
+header a {
+	text-decoration: none;
+}
+
+header a:hover {
+	text-decoration: none;
+}
