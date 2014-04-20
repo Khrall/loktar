@@ -1,0 +1,124 @@
+body, html {
+	background: #858585;
+	color: #FFF;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5 { font-weight: bold; }
+
+h1 {
+	font-size: 20pt;
+	margin-bottom: 10px;
+}
+
+p {
+	font-size: 13pt;
+	line-height: 16pt;
+	color: #585858;
+}
+
+#top {
+	width: 100%;
+	background: #262323;
+	border-bottom: 10px solid #141414;
+}
+
+.wrapper {
+	width: 500px;
+	margin: 0 auto;
+}
+
+.box {
+	border-radius: 8px;
+	padding: 20px;
+	background: #FFF;
+	color: #262323;
+}
+
+header {
+	padding-top: 30px;
+}
+
+header > span {
+	position: relative;
+	top: 2px;
+	width: 24px;
+	height: 24px;
+	border-radius: 12px;
+	margin-right: 10px;
+	background: #b11b11;
+	display: inline-block;
+}
+
+header > h1 { display: inline-block; }
+
+#description {
+	margin: 40px 0 40px;
+}
+
+#github, #android {
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+}
+
+#github {
+	background: transparent url('github.png');
+	background-size: 28px;
+	margin-left: 265px;
+}
+
+#github:hover {
+	background: transparent url('github-hover.png');
+	background-size: 28px;
+}
+
+#android {
+	background: transparent url('android.png');
+	background-size: 28px;;
+	margin-left: 5px;
+}
+
+#android:hover {
+	background: transparent url('android-hover.png');
+	background-size: 28px;
+}
+
+img#phone {
+	display: block;
+	width: 240px;
+	margin: 40px auto;
+}
+
+#who-made-it {
+	margin: 60px 0;
+}
+
+footer {
+	width: 100%;
+	height: 50px;
+	background: #262323;
+	color: #FFF;
+	padding: 20px 0;
+	font-size: 10pt;
+}
+
+footer a {
+	margin-left: 5px;
+	color: #BD7979;
+}
+
+footer a:hover {
+	color: #DB8E8E;
+	text-decoration: none;
+}
+
+@media (max-width: 520px) {
+	.wrapper {
+		width: 80%;
+	}
+
+	#github {
+		margin-left: 25px;
+	}
+}

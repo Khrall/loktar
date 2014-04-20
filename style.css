@@ -24,7 +24,24 @@ h1, h2, h3, h4, h5 {
 
 p, a, ul, li {
 	font-family: 'Ubuntu', Arial, sans-serif;
+	margin-bottom: 10px;
 }
+
+a {
+	color: #64A595;
+	font-weight: bold;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #528679;
+}
+
+a.gold { color: #c7a853; }
+a.gold:hover { color: #E2C063; }
+
+a.red { color: #DA9191; }
+a.red:hover { color: #ad6666; }
 
 .light {
 	font-family: 'Open Sans', Arial, sans-serif;
@@ -125,7 +142,7 @@ img#banner-logo {
 #about ul.social {
 }
 
-#about ul.social > li {
+#about ul.social li {
 	display: inline-block;
 	margin: 0 3px;
 }

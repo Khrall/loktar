@@ -49,4 +49,12 @@ function pn_web_project_scripts() {
 	
 }
 
+function abakaffe_scripts() {
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );
+	wp_enqueue_style( 'reset-css', get_template_directory_uri() . '/css/reset.css' );
+	wp_enqueue_style( 'pn-web-project-css', get_template_directory_uri() .'/pages/abakaffe/style.css');
+	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/vendor/bootstrap.min.js', array(), '3.1.1', true );
+	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/pages/abakaffe/script.js', array('jquery'), '1.0.0', true );
+}
+
 ?>

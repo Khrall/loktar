@@ -1,4 +1,6 @@
-<?php add_action( 'wp_enqueue_scripts', 'front_page_scripts' ); ?>
+<?php 
+add_action( 'wp_enqueue_scripts', 'front_page_scripts' ); 
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -27,7 +29,7 @@
             <img id="banner-logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="My logo!" />
             <h1>Doctor Khrall <span>+</span></h1>
             <ul class="light">
-                <li>This site is under construction, come back soon!</li>
+                <li>Hey, sup ...</li>
             </ul>
         </div>
 
@@ -41,8 +43,8 @@
             <h1 class="name">Raymi T. Eldby</h1>
             <p class="description light">Hi, I’m a program and web developer!<br/>I turn great ideas into solid products<br/>ready for deployment.</p>
             <ul class="social">
-                <li class="social-icon github"></li>
-                <li class="social-icon linkedin"></li>
+                <a href="https://github.com/Khrall/" title="Khrall @GitHub" target="_blank"><li class="social-icon github"></li></a>
+                <a href="http://www.linkedin.com/profile/view?id=299445779" title="Raymi T. Eldby @LinkedIn" target="_blank"><li class="social-icon linkedin"></li></a>
             </ul>
         </div>
     </div>
@@ -55,23 +57,27 @@
             <p class="intro-description">Take a look at some of my work!</p> 
             <div id="showcase">
                 <ul class="profiles">
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/conceptual.png" /></li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/abakaffe.png" /></li>
                     <li><img src="<?php echo get_template_directory_uri(); ?>/img/pn-web.png" /></li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/portfolio.png" /></li>
+                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/ktnelmchat.png" /></li>
                 </ul>
                 <ul class="descriptions">
                     <li project-id="0">
-                        <h2 class="project-title">Event Connect</h2>
-                        <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris turpis felis, venenatis a fringilla ut, pretium et mi. Nullam laoreet viverra mauris id euismod. Maecenas vel aliquam urna, ac vehicula lacus. Cras congue porttitor gravida. Aliquam nec commodo nisi.</p>
+                        <h2 class="project-title">Abakaffe</h2>
+                        <p class="project-description">Abakaffe is a small Android Application accomplishing the small task of providing information about the student orgnization's coffemaker.</p>
+                        <p><a href="<?php echo home_url(); ?>/apps/abakaffe/">Go to project website</a></p>
                     </li>
                     <li project-id="1">
-                        <h2 class="project-title">Paulsen & Nilsen Web</h2>
-                        <p class="project-description">Vivamus ullamcorper ante sapien, sit amet vestibulum diam sodales in. Etiam laoreet varius leo ut gravida. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In leo ligula, accumsan non tellus non, sodales lobortis lacus.</p>
+                        <h2 class="project-title">Paulsen & Nilsen</h2>
+                        <p class="project-description">A development project assigned by a two skilled architects through VRTKL. Paulsen & Nilsen work as interior architects both in Norway as well as internationally.</p>
+                        <p><a href="<?php echo home_url(); ?>/websites/pn-web/">Go to project website</a></p>
                     </li>
                     <li project-id="2">
-                        <h2 class="project-title">Web Portfolio</h2>
-                        <p class="project-description">Vestibulum sed libero quis urna hendrerit vulputate. Phasellus sollicitudin orci id lectus hendrerit ultricies. Nulla vestibulum eros sed nunc ullamcorper, ut ullamcorper lorem volutpat. Cras luctus nisl ac elit aliquam, et vehicula dui ullamcorper. Integer sollicitudin.</p>
+                        <h2 class="project-title">KTN ELM Chat</h2>
+                        <p class="project-description">KTN ELM Chat is a chat developed by students at NTNU. It is based on Java, but uses SocketIO to communicate with any modern web browser.</p>
+                        <p><a href="<?php echo home_url(); ?>/apps/ktn-elm-chat/">Go to project website</a></p>
                     </li>
+                    
                 </ul>
             </div>
         </div>
