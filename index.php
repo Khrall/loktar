@@ -29,7 +29,7 @@ add_action( 'wp_enqueue_scripts', 'front_page_scripts' );
             <img id="banner-logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="My logo!" />
             <h1>Doctor Khrall <span>+</span></h1>
             <ul class="light">
-                <li>Hey, sup ...</li>
+                <li>Yo, welcome to my portofolio! There's content below!</li>
             </ul>
         </div>
 
@@ -41,7 +41,7 @@ add_action( 'wp_enqueue_scripts', 'front_page_scripts' );
         <div class="wrapper">
             <img class="avatar" src="<?php echo get_template_directory_uri(); ?>/img/self.png" />
             <h1 class="name">Raymi T. Eldby</h1>
-            <p class="description light">Hi, I’m a program and web developer!<br/>I turn great ideas into solid products<br/>ready for deployment.</p>
+            <p class="description light">Hi, I’m a program and web developer!<br/>I love to see ideas turned into real products,<br/>I'll do whatever it takes to get it done!</p>
             <ul class="social">
                 <a href="https://github.com/Khrall/" title="Khrall @GitHub" target="_blank"><li class="social-icon github"></li></a>
                 <a href="http://www.linkedin.com/profile/view?id=299445779" title="Raymi T. Eldby @LinkedIn" target="_blank"><li class="social-icon linkedin"></li></a>

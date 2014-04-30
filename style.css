@@ -117,7 +117,7 @@ img#banner-logo {
 
 #banner ul {
 	text-align: left;
-	margin: 0 auto;
+	margin-left: 130px;
 	width: 235px;
 	display: none;
 }
