@@ -56,11 +56,13 @@ add_action( 'wp_enqueue_scripts', 'front_page_scripts' );
             <h1 class="intro-header">Portfolio</h1>
             <p class="intro-description">Take a look at some of my work!</p> 
             <div id="showcase">
-                <ul class="profiles">
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/abakaffe.png" /></li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/pn-web.png" /></li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/ktnelmchat.png" /></li>
-                </ul>
+                <div id="profile-slider">
+                    <ul class="profiles">
+                        <li class="current"><img src="<?php echo get_template_directory_uri(); ?>/img/abakaffe.png" /></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/img/pn-web.png" /></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/img/ktnelmchat.png" /></li>
+                    </ul>
+                </div>
                 <ul class="descriptions">
                     <li project-id="0">
                         <h2 class="project-title">Abakaffe</h2>
