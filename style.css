@@ -160,26 +160,31 @@ img#banner-logo {
 .social-icon.linkedin:hover { background: transparent url('img/linkedin-hover.png'); background-size: contain; }
 
 #portfolio .wrapper {
-	height: 560px;	
+	width: 80%;
+	height: 600px;
 }
 
-#portfolio h1.intro-header {
-}
-
-#portfolio p.intro-description {
-	margin: 10px 0 30px;
-}
-
-#showcase {
+#portfolio .project {
 	text-align: left;
+	padding: 60px;
+	margin-bottom: 80px;
 }
 
-#showcase .bx-pager {
-	margin-bottom: -20px;
+#portfolio .project-profile {
+	padding: 10px;
+	padding-bottom: 3px;
+	box-shadow: 0px 0px 5px #888888;
+	margin-bottom: 25px;
+	overflow: hidden;
 }
 
-#showcase .profiles img {
+#portfolio .project-profile img {
 	width: 100%;
+	border: 1px solid #DDD;
+}
+
+#portfolio h2.project-title {
+	margin-bottom: 15px;
 }
 
 /* Smartphones (portrait) ----------- */
@@ -204,6 +209,16 @@ img#banner-logo {
 	.content-breaker {
 		height: 200px;
 	}
+
+	#portfolio .wrapper {
+		width: 100%;
+		height: 1150px;
+	}
+
+	#portfolio .project {
+		padding: 10px;
+	}
+
 }
 
 /* Smartphones (portrait) ----------- */

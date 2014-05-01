@@ -123,29 +123,5 @@ jQuery(document).ready(function($) {
 		})
 	}
 
-    
-    /*
-	$("#showcase .profiles").bxSlider({
-		onSlideBefore: function($slideElement, oldIndex, newIndex) {
-			$("#showcase ul.descriptions li[project-id='"+oldIndex+"']").fadeOut(250, function() {
-				$("#showcase ul.descriptions li[project-id='"+newIndex+"']").fadeIn(250);
-			});
-		}
-	})*/
-    
-    var oldSliderIndex = 0;
-    $("#showcase ul.descriptions li[project-id!='0']").hide();
-
-    window.unoSlider = $('#profile-slider').unoSlider({
-        callback: function() {
-            var newIndex = this;
-            $("#showcase ul.descriptions li[project-id='"+oldSliderIndex+"']").fadeOut(250, function() {
-                $("#showcase ul.descriptions li[project-id='"+newIndex+"']").fadeIn(250);
-                oldSliderIndex = newIndex;
-            });
-        }
-    });
-
-
 
 });
