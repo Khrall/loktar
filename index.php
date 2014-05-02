@@ -104,38 +104,6 @@ add_action( 'wp_enqueue_scripts', 'front_page_scripts' );
             </div>
 
         </div>
-        <?php /*<div class="wrapper">
-            <h1 class="intro-header">Portfolio</h1>
-            <p class="intro-description">Take a look at some of my work!</p> 
-            <div id="showcase">
-                <div id="profile-slider">
-                    <ul class="profiles">
-                        <li class="current"><img src="<?php echo get_template_directory_uri(); ?>/img/abakaffe.png" /></li>
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/img/pn-web.png" /></li>
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/img/ktnelmchat.png" /></li>
-                    </ul>
-                </div>
-                <ul class="descriptions">
-                    <li project-id="0">
-                        <h2 class="project-title">Abakaffe</h2>
-                        <p class="project-description">Abakaffe is a small Android Application accomplishing the small task of providing information about the student orgnization's coffemaker.</p>
-                        <p><a href="<?php echo home_url(); ?>/apps/abakaffe/">Go to project website</a></p>
-                    </li>
-                    <li project-id="1">
-                        <h2 class="project-title">Paulsen & Nilsen</h2>
-                        <p class="project-description">A development project assigned by a two skilled architects through VRTKL. Paulsen & Nilsen work as interior architects both in Norway as well as internationally.</p>
-                        <p><a href="<?php echo home_url(); ?>/websites/pn-web/">Go to project website</a></p>
-                    </li>
-                    <li project-id="2">
-                        <h2 class="project-title">KTN ELM Chat</h2>
-                        <p class="project-description">KTN ELM Chat is a chat developed by students at NTNU. It is based on Java, but uses SocketIO to communicate with any modern web browser.</p>
-                        <p><a href="<?php echo home_url(); ?>/apps/ktn-elm-chat/">Go to project website</a></p>
-                    </li>
-                    
-                </ul>
-            </div>
-        </div> 
-        */ ?>
     </div>
 
     <script>
