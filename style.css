@@ -210,6 +210,7 @@ img#banner-logo {
 @media (max-width : 1600px) {
 	#portfolio .wrapper {
 		width: 90%;
+		height: 540px;
 	}
 }
 
@@ -244,7 +245,7 @@ img#banner-logo {
 	#portfolio .project {
 		padding: 40px;
 	}
-	
+
 }
 
 /* Smartphones (portrait) ----------- */
