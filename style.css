@@ -112,10 +112,6 @@ img#banner-logo {
 	margin-bottom: 20px;
 }
 
-#banner h1 {
-
-}
-
 #banner h1 > span {
 	cursor: pointer;
 	width: 16px;
@@ -218,6 +214,10 @@ img#banner-logo {
 @media only screen and (max-width : 320px) {
 	#banner {
 		height: 460px;
+	}
+
+	#banner ul {
+		margin-left: 38px;
 	}
 
 	#about img.avatar {
