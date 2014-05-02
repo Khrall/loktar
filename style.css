@@ -169,7 +169,7 @@ img#banner-logo {
 .social-icon.linkedin:hover { background: transparent url('img/linkedin-hover.png'); background-size: contain; }
 
 #portfolio .wrapper {
-	width: 80%;
+	width: 1500px;
 	height: 600px;
 }
 
@@ -207,6 +207,16 @@ img#banner-logo {
 	margin-bottom: 15px;
 }
 
+@media (max-width : 1600px) {
+	#portfolio .wrapper {
+		width: 90%;
+	}
+
+	#portfolio .project {
+		padding: 40px;
+	}
+}
+
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 320px) {
 	#banner {
@@ -233,10 +243,6 @@ img#banner-logo {
 	#portfolio .wrapper {
 		width: 100%;
 		height: 1450px;
-	}
-
-	#portfolio .project {
-		padding: 40px;
 	}
 
 }
