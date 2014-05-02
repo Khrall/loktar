@@ -211,10 +211,6 @@ img#banner-logo {
 	#portfolio .wrapper {
 		width: 90%;
 	}
-
-	#portfolio .project {
-		padding: 40px;
-	}
 }
 
 /* Smartphones (portrait) ----------- */
@@ -245,6 +241,10 @@ img#banner-logo {
 		height: 1450px;
 	}
 
+	#portfolio .project {
+		padding: 40px;
+	}
+	
 }
 
 /* Smartphones (portrait) ----------- */
