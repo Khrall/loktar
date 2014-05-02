@@ -61,27 +61,42 @@ add_action( 'wp_enqueue_scripts', 'front_page_scripts' );
 
             <div class="row">
                 <div class="col-md-4 project">
-                    <a href="<?php echo home_url(); ?>/apps/abakaffe/">
-                        <div class="project-profile"><img src="<?php echo get_template_directory_uri(); ?>/img/abakaffe_480.png" /><div></div></div>
-                    </a>
+                    <div class="project-profile">
+                        <div class="inner">
+                            <a href="<?php echo home_url(); ?>/apps/abakaffe/">
+                                <img src="<?php echo get_template_directory_uri(); ?>/img/abakaffe_480.png" />
+                                <img class="overlay" src="<?php echo get_template_directory_uri(); ?>/img/480_overlay.png" />
+                            </a>
+                        </div>
+                    </div>
                     <h2 class="project-title">Abakaffe</h2>
                     <p class="project-description">Abakaffe is a small Android Application accomplishing the small task of providing information about the student orgnization's coffemaker.</p>
                     <p><a href="<?php echo home_url(); ?>/apps/abakaffe/">Go to project website</a></p>
                 </div>
                 
                 <div class="col-md-4 project">
-                    <a href="<?php echo home_url(); ?>/websites/pn-web/">
-                        <div class="project-profile"><img src="<?php echo get_template_directory_uri(); ?>/img/pnweb_480.png" /></div>
-                    </a>
+                    <div class="project-profile">
+                        <div class="inner">
+                            <a href="<?php echo home_url(); ?>/websites/pn-web/">
+                                <img src="<?php echo get_template_directory_uri(); ?>/img/pnweb_480.png" />
+                                <img class="overlay" src="<?php echo get_template_directory_uri(); ?>/img/480_overlay.png" />
+                            </a>
+                        </div>
+                    </div>
                     <h2 class="project-title">Paulsen & Nilsen</h2>
                     <p class="project-description">A development project assigned by a two skilled architects through VRTKL. Paulsen & Nilsen work as interior architects both in Norway as well as internationally.</p>
                     <p><a href="<?php echo home_url(); ?>/websites/pn-web/">Go to project website</a></p>
                 </div>
 
                 <div class="col-md-4 project">
-                    <a href="<?php echo home_url(); ?>/apps/ktn-elm-chat/">
-                        <div class="project-profile"><img src="<?php echo get_template_directory_uri(); ?>/img/ktnelmchat_480.png" /></div>
-                    </a>
+                    <div class="project-profile">
+                        <div class="inner">
+                            <a href="<?php echo home_url(); ?>/apps/ktn-elm-chat/">
+                                <img src="<?php echo get_template_directory_uri(); ?>/img/ktnelmchat_480.png" />
+                                <img class="overlay" src="<?php echo get_template_directory_uri(); ?>/img/480_overlay.png" />
+                            </a>
+                        </div>
+                    </div>
                     <h2 class="project-title">KTN ELM Chat</h2>
                     <p class="project-description">KTN ELM Chat is a chat developed by students at NTNU. It is based on Java, but uses SocketIO to communicate with any modern web browser.</p>
                     <p><a href="<?php echo home_url(); ?>/apps/ktn-elm-chat/">Go to project website</a></p>

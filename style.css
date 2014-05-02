@@ -16,6 +16,11 @@ body, html {
 	line-height: 1.5em;
 }
 
+* { 
+  margin: 0; 
+  padding: 0; 
+}
+
 h1, h2, h3, h4, h5 {
 	font-family: 'Open Sans', Arial, sans-serif;
 	text-shadow: 0 0 1px rgba(51,51,51,0.2);
@@ -28,13 +33,13 @@ p, a, ul, li {
 }
 
 a {
-	color: #64A595;
+	color: #D39D4C;
 	font-weight: bold;
 }
 
 a:hover {
 	text-decoration: none;
-	color: #528679;
+	color: #AA7B35;
 }
 
 a.gold { color: #c7a853; }
@@ -113,11 +118,15 @@ img#banner-logo {
 
 #banner h1 > span {
 	cursor: pointer;
+	width: 16px;
+	height: 16px;
+	line-height: 0;
+	display: inline-block;
 }
 
 #banner ul {
 	text-align: left;
-	margin-left: 130px;
+	margin-left: 128px;
 	width: 235px;
 	display: none;
 }
@@ -171,16 +180,24 @@ img#banner-logo {
 }
 
 #portfolio .project-profile {
-	padding: 10px;
-	padding-bottom: 3px;
 	box-shadow: 0px 0px 5px #888888;
 	margin-bottom: 25px;
+	padding: 10px;
+}
+
+#portfolio .project-profile .inner {
+	position: relative;
 	overflow: hidden;
+	border: 1px solid #DDD;
 }
 
 #portfolio .project-profile img {
 	width: 100%;
-	border: 1px solid #DDD;
+	display: block;
+}
+
+#portfolio .project-profile img.overlay {
+	position: absolute;
 }
 
 #portfolio h2.project-title {

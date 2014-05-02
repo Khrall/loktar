@@ -11,7 +11,7 @@ jQuery(document).ready(function($) {
 
 	var toggle_banner_on = function() {
 		banner_toggler.unbind();
-		banner_toggler.html('-');
+		banner_toggler.html('-').css({fontSize: '32pt'});
 		banner_list.show(
 			'slide', 
 			{ direction: 'up', easing: 'easeOutBounce' }, 
@@ -22,7 +22,7 @@ jQuery(document).ready(function($) {
 
 	var toggle_banner_off = function() {
 		banner_toggler.unbind();
-		banner_toggler.html('+');
+		banner_toggler.html('+').css({fontSize: '24pt'});
 		banner_list.hide(
 			'slide', 
 			{ direction: 'up' },
@@ -122,6 +122,20 @@ jQuery(document).ready(function($) {
 	    	}
 		})
 	}
+
+    $("#portfolio .project-profile a").mouseover(function() {
+        var overlay = $(this).find('img.overlay');
+        overlay.css({top: overlay.height()});
+        $(this).unbind('mouseover');
+    });
+
+    $("#portfolio .project-profile a").hover(function() {
+        $(this).find('img.overlay').stop().animate({top: 0}, 200);
+    },
+    function() {
+        var height = $(this).find('img.overlay').height();
+        $(this).find('img.overlay').stop().animate({top: height}, 200);
+    });
 
 
 });
