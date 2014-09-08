@@ -41,7 +41,7 @@ add_action( 'wp_enqueue_scripts', 'front_page_scripts' );
         <div class="wrapper">
             <img class="avatar" src="<?php echo get_template_directory_uri(); ?>/img/self.png" />
             <h1 class="name">Raymi T. Eldby</h1>
-            <p class="description light">Hi, I’m a program and web developer!<br/>I love to see ideas turned into real products,<br/>I'll do whatever it takes to get it done!</p>
+            <p class="description light">Hi, my name is Raymi. I am a student at NTNU with a passion for application development and design.</p>
             <ul class="social">
                 <a href="https://github.com/Khrall/" title="Khrall @GitHub" target="_blank"><li class="social-icon github"></li></a>
                 <a href="http://www.linkedin.com/profile/view?id=299445779" title="Raymi T. Eldby @LinkedIn" target="_blank"><li class="social-icon linkedin"></li></a>
@@ -77,14 +77,14 @@ add_action( 'wp_enqueue_scripts', 'front_page_scripts' );
                 <div class="col-md-4 project">
                     <div class="project-profile">
                         <div class="inner">
-                            <a href="<?php echo home_url(); ?>/websites/pn-web/">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/pnweb_480.png" />
+                            <a href="http://kulturklovnene.no">
+                                <img src="<?php echo get_template_directory_uri(); ?>/img/kulturklovnene_480.png" />
                                 <img class="overlay" src="<?php echo get_template_directory_uri(); ?>/img/480_overlay.png" />
                             </a>
                         </div>
                     </div>
-                    <h2 class="project-title">Paulsen & Nilsen</h2>
-                    <p class="project-description">A development project assigned by a two skilled architects through VRTKL. Paulsen & Nilsen work as interior architects both in Norway as well as internationally.</p>
+                    <h2 class="project-title">KulturKlovnene</h2>
+                    <p class="project-description">As webmaster for KulturKlovnene, my responsibility is mainly to develop a WordPress theme for easy publication of new content.</p>
                     <p><a href="<?php echo home_url(); ?>/websites/pn-web/">Go to project website</a></p>
                 </div>
 
