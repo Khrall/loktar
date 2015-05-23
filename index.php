@@ -63,6 +63,20 @@ add_action( 'wp_enqueue_scripts', 'front_page_scripts' );
                 <div class="col-md-4 project">
                     <div class="project-profile">
                         <div class="inner">
+                            <a href="http://www.readvio.com/">
+                                <img src="<?php echo get_template_directory_uri(); ?>/img/vio_480.png" />
+                                <img class="overlay" src="<?php echo get_template_directory_uri(); ?>/img/480_overlay.png" />
+                            </a>
+                        </div>
+                    </div>
+                    <h2 class="project-title">Vio</h2>
+                    <p class="project-description">Vio gathers Norwegian quality journalism on one place by unbundling content from news papers and magazines.</p>
+                    <p><a href="http://www.readvio.com/blogg/">Go to ReadVio</a></p>
+                </div>
+
+                <div class="col-md-4 project">
+                    <div class="project-profile">
+                        <div class="inner">
                             <a href="<?php echo home_url(); ?>/apps/abakaffe/">
                                 <img src="<?php echo get_template_directory_uri(); ?>/img/abakaffe_480.png" />
                                 <img class="overlay" src="<?php echo get_template_directory_uri(); ?>/img/480_overlay.png" />
@@ -74,20 +88,6 @@ add_action( 'wp_enqueue_scripts', 'front_page_scripts' );
                     <p><a href="<?php echo home_url(); ?>/apps/abakaffe/">Go to project website</a></p>
                 </div>
                 
-                <div class="col-md-4 project">
-                    <div class="project-profile">
-                        <div class="inner">
-                            <a href="http://kulturklovnene.no">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/kulturklovnene_480.png" />
-                                <img class="overlay" src="<?php echo get_template_directory_uri(); ?>/img/480_overlay.png" />
-                            </a>
-                        </div>
-                    </div>
-                    <h2 class="project-title">KulturKlovnene</h2>
-                    <p class="project-description">As webmaster for KulturKlovnene, my responsibility is mainly to develop a WordPress theme for easy publication of new content.</p>
-                    <p><a href="<?php echo home_url(); ?>/websites/pn-web/">Go to project website</a></p>
-                </div>
-
                 <div class="col-md-4 project">
                     <div class="project-profile">
                         <div class="inner">
